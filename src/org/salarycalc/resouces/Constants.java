@@ -1,6 +1,7 @@
-package org.calculator.resouces;
+package org.salarycalc.resouces;
 
 public class Constants {
+	public static String XML_RULES = "rules.xml";
 	public static String SR_TYPE_AMOUNT = "AMOUNT";
 	public static String SR_TYPE_PERCENT = "PERCENT";
 	public static String NAME = "name";

@@ -1,11 +1,11 @@
-package org.freeda.model;
+package org.salarycalc.model;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-import org.calculator.util.MoneyMap;
+import org.salarycalc.util.MoneyMap;
 
 public class Employee {
 	private String name;

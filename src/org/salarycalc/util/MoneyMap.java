@@ -1,4 +1,4 @@
-package org.calculator.util;
+package org.salarycalc.util;
 
 import java.util.HashMap;
 import java.util.Map;
