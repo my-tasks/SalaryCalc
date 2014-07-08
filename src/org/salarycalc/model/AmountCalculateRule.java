@@ -1,6 +1,6 @@
 package org.salarycalc.model;
 
-public class AmountCalculateRule extends CalculateRule {
+public class AmountCalculateRule extends CalculateRuleBase {
 
 	@Override
 	public CalculateRuleType getType() {
@@ -8,7 +8,7 @@ public class AmountCalculateRule extends CalculateRule {
 	}
 
 	@Override
-	public int getSalary(int prophit) {
+	public int calculateSalary(int prophit) {
 		int currentFrom = 0;
 		for (Integer from : conditions.keySet()) {
 			if (prophit < from) {

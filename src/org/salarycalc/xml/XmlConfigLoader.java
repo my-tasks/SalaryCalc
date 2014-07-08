@@ -1,6 +1,6 @@
 package org.salarycalc.xml;
 
-import static org.salarycalc.resouces.Constants.*;
+import static org.salarycalc.resources.Constants.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,7 +16,7 @@ import org.jdom2.input.SAXBuilder;
 import org.salarycalc.exception.ConfigLoadingException;
 import org.salarycalc.manage.CalculateRulesManager;
 import org.salarycalc.model.AmountCalculateRule;
-import org.salarycalc.model.CalculateRule;
+import org.salarycalc.model.CalculateRuleBase;
 import org.salarycalc.model.PercentCalculateRule;
 /**
  * 
@@ -25,10 +25,10 @@ import org.salarycalc.model.PercentCalculateRule;
  *
  */
 public class XmlConfigLoader {
-	private static Map<String, CalculateRule> calculateRulesMap = new HashMap<>();
+	private static Map<String, CalculateRuleBase> calculateRulesMap = new HashMap<>();
 	private static long rulesFileLastUpdate;
 
-	public static Map<String, CalculateRule> getCalculateRulesMap() throws ConfigLoadingException{
+	public static Map<String, CalculateRuleBase> getCalculateRulesMap() throws ConfigLoadingException{
 		File rulesFile = new File(XML_RULES);
 		if (rulesFileLastUpdate != rulesFile.lastModified()){
 			parseCalculateRules(XML_RULES);	
@@ -47,7 +47,7 @@ public class XmlConfigLoader {
 			Document doc = new SAXBuilder().build(file);
 			List<Element> rulesList = doc.getRootElement().getChildren();
 			for (Element rule : rulesList) {
-				CalculateRule calculateRule = null;
+				CalculateRuleBase calculateRule = null;
 
 				switch (rule.getAttributeValue(TYPE).toUpperCase()) {
 				case ("AMOUNT"): calculateRule = new AmountCalculateRule(); break;

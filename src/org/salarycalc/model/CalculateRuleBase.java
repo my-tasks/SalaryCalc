@@ -3,7 +3,7 @@ package org.salarycalc.model;
 import java.util.Map;
 import java.util.TreeMap;
 
-public abstract class CalculateRule {
+public abstract class CalculateRuleBase {
 	private String name = "";
 	private String groupId = "";
 	private String description;
@@ -51,7 +51,7 @@ public abstract class CalculateRule {
 
 	public abstract CalculateRuleType getType();
 
-	public abstract int getSalary(int prophit);
+	public abstract int calculateSalary(int prophit);
 
 	@Override
 	public String toString() {
