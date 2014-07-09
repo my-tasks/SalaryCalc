@@ -10,12 +10,5 @@ import org.salarycalc.model.CalculateRuleBase;
 public class CalculateRulesManager {
 	private static Map<String, CalculateRuleBase> calculateRules = new HashMap<>();
 
-	public static void addSalaryRule(String groupId, CalculateRuleBase calculateRule) {
-		calculateRules.put(groupId, calculateRule);
-	}
-	
-	public static void setCalculateRules(Map<String, CalculateRuleBase> calculateRulesMap){
-		calculateRules = calculateRulesMap;
-	}
 
 }

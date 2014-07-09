@@ -1,21 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rules>
+<?xml version="1.0" encoding="UTF-8"?><rules>
 	<rule name="Парикмахер" group="common" type="PERCENT">
 		<description>Правило для мастеров-парикмахеров</description>
-		<condition from="0" salary="30" />
-		<condition from="2000000" salary="31" />
-		<condition from="4000000" salary="32" />
-		<condition from="6000000" salary="33" />
-		<condition from="8000000" salary="34" />
-		<condition from="10000000" salary="35" />
+		<condition from="0" salary="30"/>
+		<condition from="2000000" salary="31"/>
+		<condition from="4000000" salary="32"/>
+		<condition from="6000000" salary="33"/>
+		<condition from="8000000" salary="34"/>
+		<condition from="10000000" salary="35"/>
 	</rule>
 	<rule name="Маникюр-гель" group="common" type="PERCENT">
 		<description>Правило для мастеров-маникюристов, работа с гелем, свои
-			материалы</description>
-		<condition from="0" salary="50" />
+			материалы
+		</description>
+		<condition from="0" salary="50"/>
 	</rule>
 	<rule name="Маникюр-педикюр" group="common" type="PERCENT">
-		<description>Правило для мастеров-маникюристов, маникюр-педикюр</description>
-		<condition from="0" salary="30" />
+		<description>Правило для мастеров-маникюристов, маникюр-педикюр
+		</description>
+		<condition from="0" salary="30"/>
 	</rule>
 </rules>

@@ -1,17 +1,23 @@
 package org.salarycalc.dao;
 
+import java.util.Map;
+
+import org.salarycalc.exception.DataAccessException;
+import org.salarycalc.exception.NotUniqueIdentifier;
+import org.salarycalc.exception.NotValidEntityException;
+
 public interface XmlDAO<T> {
 
-	String create(T entity);
+	String create(T entity) throws DataAccessException, NotUniqueIdentifier, NotValidEntityException;
 
 	T get(String id);
+
+	Map<String, T> getAll();
 	
-	T update(String id, T entity);
+	T update(T entity) throws DataAccessException, NotValidEntityException;
 	
-	T update(T entity);
+	boolean remove(T entity) throws DataAccessException;
 	
-	String remove(T entity);
-	
-	String remove(String id);
+	boolean remove(String id) throws DataAccessException;
 	
 }

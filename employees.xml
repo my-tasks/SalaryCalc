@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><departures>
+	<departure name="Стоматология">
+		<!-- Правила рассчета, которые применяются ко всем сотрудникам подразделения 
+			"Стоматология" -->
+		<common-rules>
+			<rule id="продажи::common"/>
+		</common-rules>
+		<!-- Сотрудники подразделения "Стоматология" -->
+		<employees>
+			<employee name="Казак">
+				<rule id="Ортопедия::Казак"/>
+			</employee>
+		</employees>
+	</departure>
+	<departure name="Салон">
+		<!-- Правила рассчета, которые применяются ко всем сотрудникам подразделения 
+			"Салон" -->
+		<common-rules>
+			<rule id="продажи::common"/>
+		</common-rules>
+		<!-- Сотрудники подразделения "Салон" -->
+		<employees>
+			
+			
+			
+			 
+			
+
+			
+			
+		</employees>
+	</departure>
+</departures>

@@ -8,10 +8,20 @@ import java.util.Set;
 import org.salarycalc.util.MoneyMap;
 
 public class Employee {
+	private String departure;
 	private String name;
 	private Set<String> salaryRulesIds = new HashSet<>();
 	private Map<String, MoneyMap> prophits = new HashMap<>();
 	private Map<String, MoneyMap> salary = new HashMap<>();
+
+	
+	public String getDeparture() {
+		return departure;
+	}
+
+	public void setDeparture(String departure) {
+		this.departure = departure;
+	}
 
 	public String getName() {
 		return name;
