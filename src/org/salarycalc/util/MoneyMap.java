@@ -6,14 +6,14 @@ import java.util.Set;
 
 public class MoneyMap {
 	/*
-	 * key (String type) of moneyMap is a SalaryRule Id, value (Integer type) is
-	 * a prophit or salary of an Employee, referenced to the SalaryRule
+	 * key (String type) of moneyMap is a CalculateRule Id, value (Integer type) is
+	 * a prophit or salary of an Employee, referenced to the CalculateRule
 	 * identified by key
 	 */
 	private Map<String, Integer> moneyMap = new HashMap<>();
 
-	public void setSalaruRulesIdSet(Set<String> salaryRulesIdSet) {
-		for (String salaryRuleId : salaryRulesIdSet) {
+	public void setCalculateRulesIdSet(Set<String> calculateRuleId) {
+		for (String salaryRuleId : calculateRuleId) {
 			moneyMap.put(salaryRuleId, 0);
 		}
 	}
@@ -26,17 +26,17 @@ public class MoneyMap {
 		return moneyMap;
 	}
 
-	public Integer getSumFor(String salaryRuleId) {
-		return moneyMap.get(salaryRuleId);
+	public Integer getSumFor(String calculateRuleId) {
+		return moneyMap.get(calculateRuleId);
 	}
 
-	public void setSumFor(String salaryRuleId, Integer sum) {
-		moneyMap.put(salaryRuleId, sum);
+	public void setSumFor(String calculateRuleId, Integer sum) {
+		moneyMap.put(calculateRuleId, sum);
 	}
 
 	public static MoneyMap getInitializedMoneyMap(Set<String> salaryRulesIds) {
 		MoneyMap mm = new MoneyMap();
-		mm.setSalaruRulesIdSet(salaryRulesIds);
+		mm.setCalculateRulesIdSet(salaryRulesIds);
 		return mm;
 	}
 

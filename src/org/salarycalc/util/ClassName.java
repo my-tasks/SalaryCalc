@@ -6,7 +6,7 @@ public class ClassName {
 		try {
 			throw new RuntimeException();
 		} catch (RuntimeException ex) {
-			return ex.getStackTrace()[1].getClass().getSimpleName();
+			return ex.getStackTrace()[2].getClassName();
 		}
 	}
 }
